@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.hero {
+    height: 650px;
+    background-image: url(../assets/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.account {
+    position: absolute;
+    width: 86px;
+    height: 53px;
+    right: 122px;
+    top: 30px;
+    background: #FFFFFF;
+    border-radius: 26.5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 122px;
+    top: 40px;
+}
+
+.intro {
+    position: absolute;
+    left: 63px;
+    top: 384px;
+    padding: 96px 156px 75px 64px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
+
+}
+
+.intro__title {
+    font-family: Merriweather;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 521px;
+}
+
+.intro__title--highlight {
+    font-family: Montserrat;
+    line-height: 47.5px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F78065;
+}
+
+.intro__description {
+    width: 515px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    opacity: .6;
+    padding: 29px 0;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    gap: 41px;
+    position: relative;
+    top: 399px;
+    padding: 0 81px 0 119px;
+}
+
+.services__title {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    padding: 84px 0 31px 0;
+}
+
+.services__content {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14,63px;
+    opacity: 0.6;
+    padding-bottom: 31px;
+}
+
+.services__discover {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F78065;
+}
+
+.priorities {
+    position: relative;
+    padding: 0 100px;
+    top: 639px;
+}
+
+.priorities__moto {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+}
+
+.priorities__steps {
+    display: flex;
+    flex-direction: row;
+}
