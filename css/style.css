@@ -1,6 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .wrapper {
@@ -12,6 +15,20 @@ html, body {
     background-image: url(../assets/hero.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media only screen and (max-width: 1400px) {
+    .hero {
+        background-size: contain;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hero {
+        height: 300px;
+        background-size: cover;
+        background-position-x: center;
+    }
 }
 
 .account {
@@ -42,13 +59,11 @@ html, body {
     padding: 96px 156px 75px 64px;
     background: #FFFFFF;
     box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
-
 }
 
 .intro__title {
     font-family: Merriweather;
     font-size: 39px;
-    font-style: normal;
     font-weight: 700;
     line-height: 49px;
     letter-spacing: 0em;
@@ -57,7 +72,6 @@ html, body {
 }
 
 .intro__title--highlight {
-    font-family: Montserrat;
     line-height: 47.5px;
     letter-spacing: 0em;
     text-align: left;
@@ -66,9 +80,7 @@ html, body {
 
 .intro__description {
     width: 515px;
-    font-family: Montserrat;
     font-size: 20px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0em;
@@ -77,28 +89,57 @@ html, body {
     padding: 29px 0;
 }
 
+@media only screen and (max-width: 1000px) {
+    .intro {
+        box-shadow: unset;
+        left: 0;
+    }
+    .intro__description, .intro__title {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .intro__description, .intro__title {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .account {
+        right: 10px;
+        top: 10px;
+    }
+    .logo {
+        left: 10px;
+        top: 10px;
+    }
+
+    .intro {
+        padding: 10px;
+        top: 300px;
+    }
+}
+
 .services {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 41px;
     position: relative;
-    top: 399px;
+    margin-top: 399px;
     padding: 0 81px 0 119px;
 }
 
 .services__title {
     font-family: Merriweather;
-    font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     padding: 84px 0 31px 0;
 }
 
-.services__content {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-style: normal;
+.services__description {
+    font-size: 14px;
     font-weight: 400;
     line-height: 14,63px;
     opacity: 0.6;
@@ -106,29 +147,390 @@ html, body {
 }
 
 .services__discover {
-    font-family: Montserrat;
-    font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
     color: #F78065;
 }
 
+@media only screen and (max-width: 1000px) {
+    .services {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .services {
+        padding: 10px;
+        margin-top: 300px;
+    }
+
+    .services > div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .priorities {
     position: relative;
     padding: 0 100px;
-    top: 639px;
+    margin-top: 240px;
 }
 
-.priorities__moto {
+.priorities__heading {
     font-family: Merriweather;
-    font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 45px;
 }
 
 .priorities__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 46px;
+}
+
+.priorities__icon {
+    display: grid;
+    align-items: center;
+    padding: 115px 0 70px;
+}
+
+.priorities__title {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    padding-bottom: 31px;
+}
+
+.priorities__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    min-height: 88px;
+}
+
+.priorities__more {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F78065;
+}
+
+@media only screen and (max-width: 1000px) {
+    .priorities {
+        margin-top: 150px;
+    }
+
+    .priorities__steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .priorities__icon {
+        padding: 50px 0 30px;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+    .priorities {
+        padding: 10px;
+        margin-top: 50px;
+    }
+    .priorities__heading, .priorities__title {
+        font-size: 20px;
+    }
+}
+
+.community {
+    position: relative;
+    margin-top: 263px;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 325px auto;
+    gap: 127px;
+}
+
+.community__title {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    padding-bottom: 32px;
+}
+
+.community__description {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 48px;
+}
+
+.start {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px 12px 16px;
+    width: 250px;
+    height: 65px;
+    background: #F78065;
+    color: #fff;
+    border: transparent;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 125%;
+}
+
+.community__areas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 49px;
+}
+
+.community__name {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    padding-top: 24px;
+}
+
+.community__place {
+    font-size: 14px;
+    line-height: 17px;    
+    color: #3F3D56;
+    padding: 8px 0 11px 0;
+}
+
+.community__site {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #F78065;
+}
+
+@media only screen and (max-width: 1400px) {
+    .community {
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .community__areas {
+        gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .community {
+        margin-top: 50px;
+        padding: 10px;
+    }
+    .community__areas {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .community__title {
+        font-size: 20px;
+    }
+    .start {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+
+.advantages {
+    position: relative;
+    margin-top: 232px;
+    padding: 0 100px;
+}
+
+.advantages__heading {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+}
+
+.advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 41px;
+}
+
+.advantages__icon {
+    padding: 108px 0 64px 0;
+}
+
+.advantages__title {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    min-height: 80px;
+}
+
+.advantages__description {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 1000px) {
+    .advantages {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .advantages {
+        padding: 0 20px;
+        margin-top: 50px;
+
+    }
+    .advantages__heading, .advantages__title {
+        font-size: 20px;
+    }
+    .advantages__list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.footer {
+    background: #F7F7F7;
+    padding: 96px 110px 63px 103px;
+    margin-top: 251px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 157px;
+}
+
+.brand {
+    width: 240px;
+}
+
+.brand__title {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    padding-bottom: 16px;
+}
+
+.brand__motto {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 117px;
+}
+
+.links > div {
+    display: grid;
+    gap: 24px;
+}
+
+.links__title  {
+    font-family: Merriweather;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.links__item {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer__rights {
+    margin-top: 85px;
+    padding-top: 28px;
+    opacity: 0.2;
+    border-top: 1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer__rights--right {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .footer__grid {
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .links > div {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .footer__grid {
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    .footer__grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .brand__title, .brand__motto {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .footer__rights, .footer__rights--right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
